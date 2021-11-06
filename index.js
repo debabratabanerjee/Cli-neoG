@@ -1,6 +1,8 @@
 var readline= require('readline-sync')
 
 var scoreCard = 0;
+
+//forceful consent
 var consent =readline.question("Do you wana know me better by playing a quiz\nType yes or no ");
 if(consent==="yes"){
 console.log("Hi lets see HOW WELL DO YOU KNOW ME\n");
@@ -29,6 +31,8 @@ function play(question,answer,review){
   console.log(review)
 }
 
+
+//array of objects here the questions directory
 var questions =[{
   question :"What I like the most to eat \n puri or chicken ",
   answer : "puri",
@@ -45,6 +49,7 @@ var questions =[{
   review: "My is less than that",
 }];
 
+//looping of questions
 for(var i=0;i<questions.length;i++){
   var current = questions[i];
   play(current.question,current.answer,current.review)
